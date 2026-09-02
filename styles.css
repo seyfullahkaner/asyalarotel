@@ -28,6 +28,14 @@ button {
 }
 a { color: inherit; text-decoration: none; }
 body.lightbox-open { overflow: hidden; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
 
 .site-header {
   position: fixed;
@@ -272,6 +280,21 @@ h3 {
   transition: transform 260ms ease;
 }
 .room-card div { padding: 22px; }
+.room-price {
+  display: block;
+  margin-top: 18px;
+  color: var(--brand);
+  font-size: 28px;
+  line-height: 1;
+}
+.price-note {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
 .room-card {
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
@@ -288,6 +311,25 @@ h3 {
 }
 .room-card:hover h3 {
   color: var(--accent);
+}
+.price-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: center;
+  margin-top: 20px;
+  padding: 24px;
+  border: 1px solid rgba(184, 138, 59, 0.34);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 8px 24px rgba(24, 35, 58, 0.06);
+}
+.price-summary p {
+  margin: 0;
+  color: var(--muted);
+}
+.price-summary .btn {
+  white-space: nowrap;
 }
 
 .gallery-grid {
@@ -490,7 +532,7 @@ h3 {
   .main-nav { display: none; }
   .hero { min-height: 88vh; }
   .quick-reserve,
-  .intro-grid, .room-list, .gallery-grid, .service-grid, .contact-panel {
+  .intro-grid, .room-list, .gallery-grid, .service-grid, .contact-panel, .price-summary {
     grid-template-columns: 1fr;
   }
   .quick-reserve { margin-top: 0; width: 100%; border-radius: 0; border-left: 0; border-right: 0; }
