@@ -464,6 +464,7 @@ h3 {
   background: rgba(7, 13, 24, 0.94);
   opacity: 0;
   pointer-events: none;
+  touch-action: pan-y;
   transition: opacity 180ms ease;
 }
 .lightbox.is-open {
@@ -567,7 +568,26 @@ h3 {
     padding-bottom: 56px;
   }
   .btn { width: 100%; }
-  .gallery-item { min-height: 230px; }
+  .gallery-grid {
+    display: flex;
+    gap: 12px;
+    margin-inline: -18px;
+    padding: 0 18px 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .gallery-grid::-webkit-scrollbar { display: none; }
+  .gallery-item {
+    flex: 0 0 82%;
+    min-height: 230px;
+    scroll-snap-align: center;
+  }
+  .gallery-item.wide,
+  .gallery-item.portrait {
+    grid-column: auto;
+    grid-row: auto;
+  }
   .lightbox {
     grid-template-columns: 1fr 1fr;
     align-items: end;

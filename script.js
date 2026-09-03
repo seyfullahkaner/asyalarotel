@@ -8,6 +8,10 @@ const prevButton = document.querySelector("[data-lightbox-prev]");
 const nextButton = document.querySelector("[data-lightbox-next]");
 
 let activeGalleryIndex = 0;
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
 
 function updateHeader() {
   if (header) header.classList.toggle("scrolled", window.scrollY > 24);
@@ -48,6 +52,15 @@ function showGalleryImage(direction) {
   updateLightbox();
 }
 
+function handleLightboxSwipe() {
+  const diffX = touchEndX - touchStartX;
+  const diffY = touchEndY - touchStartY;
+  const isHorizontalSwipe = Math.abs(diffX) > 48 && Math.abs(diffX) > Math.abs(diffY) * 1.25;
+
+  if (!isHorizontalSwipe) return;
+  showGalleryImage(diffX > 0 ? -1 : 1);
+}
+
 window.addEventListener("scroll", updateHeader, { passive: true });
 updateHeader();
 
@@ -62,6 +75,19 @@ nextButton?.addEventListener("click", () => showGalleryImage(1));
 lightbox?.addEventListener("click", (event) => {
   if (event.target === lightbox) closeLightbox();
 });
+
+lightbox?.addEventListener("touchstart", (event) => {
+  const touch = event.changedTouches[0];
+  touchStartX = touch.clientX;
+  touchStartY = touch.clientY;
+}, { passive: true });
+
+lightbox?.addEventListener("touchend", (event) => {
+  const touch = event.changedTouches[0];
+  touchEndX = touch.clientX;
+  touchEndY = touch.clientY;
+  handleLightboxSwipe();
+}, { passive: true });
 
 document.addEventListener("keydown", (event) => {
   if (!lightbox?.classList.contains("is-open")) return;
