@@ -295,6 +295,33 @@ h3 {
   font-weight: 800;
   text-transform: uppercase;
 }
+.price-list {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 0;
+}
+.price-list div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+.price-list dt {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+.price-list dd {
+  margin: 0;
+  color: var(--brand);
+  font-size: 17px;
+  font-weight: 900;
+  white-space: nowrap;
+}
 .room-card {
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
