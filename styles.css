@@ -437,6 +437,78 @@ h3 {
   font-weight: 800;
 }
 
+/* Google Reviews start */
+.reviews {
+  background: var(--paper);
+}
+.reviews-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: end;
+}
+.reviews-header .section-heading {
+  margin-bottom: 0;
+}
+.reviews-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.reviews .btn.secondary {
+  color: var(--brand-dark);
+  border-color: var(--line);
+  background: var(--white);
+}
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 34px;
+}
+.review-card {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  min-height: 250px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 8px 24px rgba(24, 35, 58, 0.06);
+}
+.review-stars {
+  color: var(--accent-strong);
+  font-size: 20px;
+  letter-spacing: 0;
+}
+.review-card p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1.42;
+}
+.review-card span {
+  align-self: end;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.review-note {
+  margin-top: 18px;
+  padding: 20px 24px;
+  border: 1px solid rgba(184, 138, 59, 0.34);
+  border-radius: 8px;
+  background: var(--white);
+}
+.review-note p {
+  margin: 0;
+  color: var(--muted);
+}
+/* Google Reviews end */
+
 .video-section { background: var(--paper); }
 .hotel-video {
   width: 100%;
@@ -560,9 +632,10 @@ h3 {
   .main-nav { display: none; }
   .hero { min-height: 88vh; }
   .quick-reserve,
-  .intro-grid, .room-list, .gallery-grid, .service-grid, .contact-panel, .price-summary {
+  .intro-grid, .room-list, .gallery-grid, .service-grid, .reviews-header, .review-grid, .contact-panel, .price-summary {
     grid-template-columns: 1fr;
   }
+  .reviews-actions { justify-content: flex-start; }
   .quick-reserve { margin-top: 0; width: 100%; border-radius: 0; border-left: 0; border-right: 0; }
   .gallery-item.wide {
     grid-column: auto;
