@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Asyalar Otel | Muş Otel, Yurt ve Konaklama</title>
-    <meta name="description" content="Asyalar Otel, Muş Merkez'de otel ve yurt konaklaması arayanlar için temiz odalar, uygun fiyatlar, ücretsiz Wi-Fi, kolay ulaşım ve WhatsApp rezervasyon imkanı sunar.">
-    <meta name="keywords" content="Muş otel, Muş yurt, Muş konaklama, Muş Merkez otel, Muş Alparslan Üniversitesi yurt, Asyalar Otel">
+    <title>Muş Otel ve Konaklama | Asyalar Otel Muş Merkez</title>
+    <meta name="description" content="Muş otel arayanlar için Asyalar Otel; Muş Merkez'de, Muş Alparslan Üniversitesi yakınında temiz odalar, uygun fiyatlar, Wi-Fi ve WhatsApp rezervasyon sunar.">
+    <meta name="keywords" content="Muş otel, Muş otelleri, Muş Merkez otel, Muş konaklama, Muş yurt, Muş Alparslan Üniversitesi yakın otel, Asyalar Otel">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#10233f">
     <link rel="canonical" href="https://asyalarotel.com/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="tr_TR">
-    <meta property="og:title" content="Asyalar Otel | Muş Otel ve Yurt Konaklaması">
-    <meta property="og:description" content="Muş Merkez'de uygun fiyatlı otel ve yurt konaklaması, oda seçenekleri, galeri, konum ve WhatsApp rezervasyon.">
+    <meta property="og:title" content="Muş Otel ve Konaklama | Asyalar Otel">
+    <meta property="og:description" content="Muş Merkez'de, üniversite yakınında uygun fiyatlı otel ve yurt konaklaması. Oda seçenekleri, galeri, konum ve WhatsApp rezervasyon.">
     <meta property="og:image" content="https://asyalarotel.com/assets/img/asyalar-08.jpg">
     <meta property="og:url" content="https://asyalarotel.com/">
     <meta name="twitter:card" content="summary_large_image">
@@ -22,29 +22,69 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Hotel",
-        "name": "Asyalar Otel",
-        "url": "https://asyalarotel.com/",
-        "image": "https://asyalarotel.com/assets/img/asyalar-08.jpg",
-        "telephone": "+905333554617",
-        "priceRange": "1000-1200 TRY",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Muş Alparslan Üniversitesi karşısı, Kayak Merkezi altı, Güzeltepe Mahallesi",
-          "addressLocality": "Muş",
-          "addressRegion": "Muş",
-          "addressCountry": "TR"
-        },
-        "hasMap": "https://maps.app.goo.gl/17mbRnD5xqb91SsC6",
-        "makesOffer": [
-          {"@type": "Offer", "name": "Tek kişilik oda", "price": "1200", "priceCurrency": "TRY", "availability": "https://schema.org/InStock"},
-          {"@type": "Offer", "name": "Çift kişilik oda kişi başı", "price": "1100", "priceCurrency": "TRY", "availability": "https://schema.org/InStock"},
-          {"@type": "Offer", "name": "Üç kişilik oda kişi başı", "price": "1000", "priceCurrency": "TRY", "availability": "https://schema.org/InStock"}
-        ],
-        "amenityFeature": [
-          {"@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true},
-          {"@type": "LocationFeatureSpecification", "name": "WhatsApp rezervasyon", "value": true},
-          {"@type": "LocationFeatureSpecification", "name": "Konum bilgisi", "value": true}
+        "@graph": [
+          {
+            "@type": "Hotel",
+            "@id": "https://asyalarotel.com/#hotel",
+            "name": "Asyalar Otel",
+            "url": "https://asyalarotel.com/",
+            "image": "https://asyalarotel.com/assets/img/asyalar-08.jpg",
+            "telephone": "+905333554617",
+            "priceRange": "1000-1200 TRY",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Muş Alparslan Üniversitesi karşısı, Kayak Merkezi altı, Güzeltepe Mahallesi",
+              "addressLocality": "Muş Merkez",
+              "addressRegion": "Muş",
+              "addressCountry": "TR"
+            },
+            "areaServed": ["Muş", "Muş Merkez", "Muş Alparslan Üniversitesi"],
+            "hasMap": "https://maps.app.goo.gl/17mbRnD5xqb91SsC6",
+            "sameAs": [
+              "https://www.google.com/maps?cid=10063771171263131224"
+            ],
+            "makesOffer": [
+              {"@type": "Offer", "name": "Tek kişilik oda", "price": "1200", "priceCurrency": "TRY", "availability": "https://schema.org/InStock"},
+              {"@type": "Offer", "name": "Çift kişilik oda kişi başı", "price": "1100", "priceCurrency": "TRY", "availability": "https://schema.org/InStock"},
+              {"@type": "Offer", "name": "Üç kişilik oda kişi başı", "price": "1000", "priceCurrency": "TRY", "availability": "https://schema.org/InStock"}
+            ],
+            "amenityFeature": [
+              {"@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true},
+              {"@type": "LocationFeatureSpecification", "name": "WhatsApp rezervasyon", "value": true},
+              {"@type": "LocationFeatureSpecification", "name": "Üniversiteye yakın konum", "value": true},
+              {"@type": "LocationFeatureSpecification", "name": "Tek, çift ve üç kişilik oda seçenekleri", "value": true}
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://asyalarotel.com/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Asyalar Otel Muş Merkez'e yakın mı?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Asyalar Otel, Muş Merkez'de Güzeltepe Mahallesi tarafında, Muş Alparslan Üniversitesi karşısında konumlanır."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Muş'ta günlük oda fiyatları ne kadar?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Asyalar Otel'de tek kişilik oda 1.200 TL, çift kişilik odada kişi başı 1.100 TL, üç kişilik odada kişi başı 1.000 TL olarak belirtilmiştir. Güncel uygunluk için WhatsApp üzerinden bilgi alınabilir."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Asyalar Otel'de yurt tipi uzun süreli konaklama var mı?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tek, çift ve üç kişilik odalar için aylık ve yıllık konaklama seçenekleri bulunur. Güncel kontenjan ve fiyatlar için otelle iletişime geçilmelidir."
+                }
+              }
+            ]
+          }
         ]
       }
     </script>
@@ -62,6 +102,7 @@
         <a href="#video">Video</a>
         <a href="#hizmetler">Hizmetler</a>
         <a href="#yorumlar">Yorumlar</a>
+        <a href="#sss">SSS</a>
         <a href="#iletisim">İletişim</a>
       </nav>
       <a class="nav-whatsapp" href="https://wa.me/905333554617" target="_blank" rel="noopener">WhatsApp</a>
@@ -76,7 +117,7 @@
         <div class="hero-content">
           <p class="eyebrow">Muş Merkez'de otel ve yurt konaklaması</p>
           <h1>Asyalar Otel</h1>
-          <p class="hero-copy">Muş otel, Muş yurt ve üniversiteye yakın konaklama arayan misafirler için temiz odalar, uygun fiyatlar ve hızlı rezervasyon desteği.</p>
+          <p class="hero-copy">Muş otel, Muş Merkez konaklama ve üniversiteye yakın yurt tipi oda arayan misafirler için temiz odalar, uygun fiyatlar ve hızlı rezervasyon desteği.</p>
           <div class="hero-facts" aria-label="Otel özellikleri">
             <span>7/24 hizmet</span>
             <span>Ücretsiz Wi-Fi</span>
@@ -110,7 +151,7 @@
           <h2>Muş'ta rahat, temiz ve kolay ulaşılabilir konaklama</h2>
         </div>
         <div class="intro-grid">
-          <article><strong>Muş Merkez konumu</strong><p>Muş Alparslan Üniversitesi karşısındaki konumuyla otel ve yurt arayan misafirler için pratik ulaşım.</p></article>
+          <article><strong>Muş Merkez konumu</strong><p>Muş Alparslan Üniversitesi karşısındaki konumuyla Muş Merkez otel ve yurt arayan misafirler için pratik ulaşım.</p></article>
           <article><strong>Özenli odalar</strong><p>Tek, çift ve üç kişilik konaklama ihtiyaçlarına uygun, dinlenmeye odaklanan oda seçenekleri.</p></article>
           <article><strong>Hızlı rezervasyon</strong><p>WhatsApp üzerinden tarih, kişi sayısı, oda durumu ve güncel fiyat bilgisi için hızlı destek alın.</p></article>
         </div>
@@ -150,7 +191,7 @@
           <button class="gallery-item" type="button" data-gallery-index="9"><img src="assets/img/asyalar-02.jpg" alt="Asyalar Otel dış cephe tanıtım görseli"><span>Fotoğrafı aç</span></button>
           <button class="gallery-item" type="button" data-gallery-index="10"><img src="assets/img/asyalar-13.jpg" alt="Asyalar Otel etkinlik alanı fotoğrafı"><span>Fotoğrafı aç</span></button>
           <button class="gallery-item wide" type="button" data-gallery-index="11"><img src="assets/img/asyalar-01.jpg" alt="Asyalar Otel tanıtım afişi"><span>Fotoğrafı aç</span></button>
-          <button class="gallery-item portrait" type="button" data-gallery-index="12"><img src="assets/img/asyalar-oda-secenekleri.png" alt="Asyalar Otel oda seçenekleri ve hizmet afişi"><span>Fotoğrafı aç</span></button>
+          <button class="gallery-item portrait" type="button" data-gallery-index="12"><img src="assets/img/Asyalar otel_yilliksiz.png" alt="Asyalar Otel oda seçenekleri ve hizmet afişi"><span>Fotoğrafı aç</span></button>
         </div>
       </section>
 
@@ -175,6 +216,25 @@
           <article><span>02</span><h3>Resepsiyon</h3><p>Konaklama sürecinde ihtiyaç duyulan konularda destek.</p></article>
           <article><span>03</span><h3>Konum</h3><p>Google Maps üzerinden tek tıkla rota oluşturma.</p></article>
           <article><span>04</span><h3>Rezervasyon</h3><p>WhatsApp üzerinden hızlı iletişim ve oda durumu bilgisi.</p></article>
+        </div>
+      </section>
+
+      <section id="mus-otel" class="local-seo section">
+        <div class="section-heading">
+          <span class="section-kicker">Muş Otel</span>
+          <h2>Muş otel aramalarında öne çıkan ihtiyaçlara uygun konaklama</h2>
+        </div>
+        <div class="local-seo-grid">
+          <div>
+            <p>Asyalar Otel, Muş Merkez'de otel, yurt ve uzun süreli konaklama arayan misafirler için hazırlanmış oda seçenekleri sunar. Muş Alparslan Üniversitesi yakınındaki konumu sayesinde şehirde iş, eğitim, sınav, ziyaret veya kısa süreli konaklama planlayan misafirler kolay ulaşım avantajı elde eder.</p>
+            <p>Muş'ta günlük otel odası arayanlar tek, çift ve üç kişilik oda seçeneklerini inceleyebilir; aylık veya yıllık konaklama düşünen misafirler ise WhatsApp üzerinden güncel oda durumu ve fiyat bilgisi alabilir.</p>
+          </div>
+          <ul class="local-seo-list" aria-label="Muş otel avantajları">
+            <li>Muş Merkez ve üniversite çevresinde konaklama</li>
+            <li>Günlük, aylık ve yıllık oda seçenekleri</li>
+            <li>WhatsApp ile hızlı fiyat ve uygunluk bilgisi</li>
+            <li>Google Maps üzerinden kolay rota oluşturma</li>
+          </ul>
         </div>
       </section>
 
@@ -209,6 +269,27 @@
         </div>
       </section>
       <!-- Google Reviews end -->
+
+      <section id="sss" class="faq section">
+        <div class="section-heading">
+          <span class="section-kicker">Sık Sorulan Sorular</span>
+          <h2>Muş otel ve oda fiyatları hakkında</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Asyalar Otel Muş Merkez'e yakın mı?</summary>
+            <p>Asyalar Otel, Muş Merkez'de Güzeltepe Mahallesi tarafında, Muş Alparslan Üniversitesi karşısında konumlanır.</p>
+          </details>
+          <details>
+            <summary>Muş'ta günlük oda fiyatları ne kadar?</summary>
+            <p>Tek kişilik oda 1.200 TL, çift kişilik odada kişi başı 1.100 TL, üç kişilik odada kişi başı 1.000 TL olarak belirtilmiştir. Güncel uygunluk için WhatsApp üzerinden bilgi alabilirsiniz.</p>
+          </details>
+          <details>
+            <summary>Uzun süreli veya yurt tipi konaklama var mı?</summary>
+            <p>Tek, çift ve üç kişilik odalarda aylık ve yıllık konaklama seçenekleri bulunur. Kontenjan ve güncel fiyat bilgisi için otelle iletişime geçebilirsiniz.</p>
+          </details>
+        </div>
+      </section>
 
       <section id="iletisim" class="contact section">
         <div class="contact-panel">
